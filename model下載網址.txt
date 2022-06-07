@@ -1,0 +1,5 @@
+https://github.com/leondgarse/keras_efficientnet_v2
+
+下載
+efficientnetv2-b3-21k.h5
+efficientnetv2-m-21k.h5

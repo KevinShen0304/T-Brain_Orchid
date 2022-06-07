@@ -17,6 +17,7 @@
 2. noisy student於此case的效果不佳，推測原因為資料增量的蘭花照片很難平衡(特殊品種幾乎沒找到更多圖片)，但還是將此做法代碼保留。
 
 ## 資料夾&代碼說明
+```
 * train : 訓練模型用
   * EfficientNetV2_model.py : 建構模型
   * loss.py : 用於metrics計算F1 loss
@@ -33,7 +34,7 @@
   * gene_img_csv.py : 將unlabel圖片產生csv檔
   * predict.py : 將unlabel圖片產生偽標籤(pseudo label)
   * filter_pseudo_label.py : 將unlabel圖片predict出的結果篩選(ex:選擇prob大於0.8的偽標籤圖片進行接下來的訓練)
-
+```
 ## noisy student執行順序
 1. 至[EfficientNetV2](https://github.com/leondgarse/keras_efficientnet_v2)下載預訓練模型
 2. 使用train訓練teacher_model

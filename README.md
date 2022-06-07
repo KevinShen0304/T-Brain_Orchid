@@ -28,8 +28,17 @@
 * predict : 預測結果用
   * predict.py : 預測預測集之結果
 
-* student_train : 訓練noisy student模型用
+* student_train : 訓練noisy student模型用 
+  * student_img : 存放unlabel圖片
   * gene_img_csv.py : 將unlabel圖片產生csv檔
+  * predict.py : 將unlabel圖片產生偽標籤(pseudo label)
+  * filter_pseudo_label.py : 將unlabel圖片predict出的結果篩選(ex:選擇prob大於0.8的偽標籤圖片進行接下來的訓練)
 
+## noisy student執行順序
+1. 至[EfficientNetV2](https://github.com/leondgarse/keras_efficientnet_v2)下載預訓練模型
+2. 使用train訓練teacher_model
+3. 將teacher_model移動至student_train中
+4. 使用teacher_model將unlabel圖片產生偽標籤
+5. 使用偽標籤訓練student_model，重複2次
+6. 將最終model移動至predict預測
 
-## 執行方式

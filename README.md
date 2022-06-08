@@ -37,9 +37,10 @@
 ```
 ## noisy student執行順序
 1. 至[EfficientNetV2](https://github.com/leondgarse/keras_efficientnet_v2)下載預訓練模型
-2. 使用train訓練teacher_model
-3. 將teacher_model移動至student_train中
-4. 使用teacher_model將unlabel圖片產生偽標籤
-5. 使用偽標籤訓練student_model，重複2次
-6. 將最終model移動至predict預測
+2. 使用resize.py，將所有圖片轉為640*640
+3. 使用train訓練teacher_model
+4. 將teacher_model移動至student_train中
+5. 使用teacher_model將unlabel圖片產生偽標籤
+6. 使用偽標籤訓練student_model，重複2次
+7. 將最終model移動至predict預測
 

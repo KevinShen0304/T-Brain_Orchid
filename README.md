@@ -8,9 +8,9 @@
 1. 使用[EfficientNetV2](https://github.com/leondgarse/keras_efficientnet_v2)之模型架構(效果最佳)，並於尾部加上全連階層&dropout，最終達到驗證集90%左右的正確率。
 2. 使用noisy student進行半監督學習，使用爬蟲的蘭花圖片約2萬張(unlabel)。
 
-## 結果
-名次/參賽隊伍
-正確率:88.5%
+## Private結果
+20/743 (名次/參賽隊伍)
+正確率:77.3%
 
 ## 心得
 1. 使用SOTA的預訓練模型效果出乎預料的好，並且由於全凍結(只訓練多加的尾巴)，訓練速度很快，並且模型有很好的穩健性
